@@ -22,3 +22,9 @@ print(question_embedding.shape)
 scores = util.cos_sim(question_embedding, embeddings)[0]
 
 print(scores)
+
+best_match = scores.argmax()
+
+print("Most relevant document:")
+print(documents[best_match])
+print("Similarity score:", scores[best_match])
